@@ -23,10 +23,10 @@ enable :sessions, :method_override
     erb :bookmarks
   end
 
-delete '/bookmarks/:id' do
-  Bookmark.delete(id: params[:id])
-  redirect '/bookmarks'
-end
+  delete '/bookmarks/:id' do
+    Bookmark.delete(id: params[:id])
+    redirect '/bookmarks'
+  end
 
   run! if app_file == $0
 end
